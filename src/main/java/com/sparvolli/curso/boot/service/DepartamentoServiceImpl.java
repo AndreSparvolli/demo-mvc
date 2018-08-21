@@ -45,4 +45,9 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 		return dao.findAll();
 	}
 
+	@Override
+	public boolean departamentoTemCargos(Long id) {
+		return !buscarPorId(id).getCargos().isEmpty();
+	}
+
 }
